@@ -1,0 +1,14 @@
+What are tests?
+
+Way to ensure that application is working correctly
+
+Backend :
+1. Unit test
+2. Integration test
+3. Pact test
+4. Manual testing
+
+
+
+TDD  (test driven development)
+BDD  (behavior driven development)

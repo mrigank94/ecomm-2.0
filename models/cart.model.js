@@ -1,11 +1,7 @@
 module.exports = (sequelize, Sequelize) => {
   const Cart = sequelize.define("cart", {
-    id: {
-      type: Sequelize.BIGINT,
-      autoIncrement: true,
-    },
     userId: {
-      type: Sequelize.BIGINT,
+      type: Sequelize.STRING,
       allowNull: false,
     },
     productId: {

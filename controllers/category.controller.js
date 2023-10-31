@@ -2,6 +2,10 @@ const { Op } = require("sequelize");
 const { Category } = require("../models");
 
 async function createCategory(req, res) {
+  // req.body = {
+  //  name: 'Electronics',
+  //  decription: 'Electronics category'
+  // }
   try {
     const category = await Category.create(req.body);
     res.status(201).send(category);
