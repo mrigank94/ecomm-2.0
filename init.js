@@ -1,13 +1,25 @@
 const { User, Category, Product, Cart } = require("./models");
+const bcrypt = require("bcrypt");
 
 const init = async () => {
-  await User.create({
-    name: "sasi",
-    email: "sasi@gmail.com",
-    userId: "sasi",
-    password: "sasi",
-    userType: "CUSTOMER",
-  });
+  await User.bulkCreate([
+    {
+      name: "sasi",
+      email: "sasi@gmail.com",
+      userId: "sasi",
+      password: bcrypt.hashSync("sasi", 10),
+      userType: "CUSTOMER",
+      userStatus: "APPROVED",
+    },
+    {
+      name: "mrigank",
+      email: "mrigank@gmail.com",
+      userId: "mrigank",
+      password: bcrypt.hashSync("mrigank", 10),
+      userType: "ADMIN",
+      userStatus: "APPROVED",
+    },
+  ]);
 
   await Category.bulkCreate([
     {

@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 
 const sequelize = new Sequelize(
-  `ecomm_db`,
+  process.env.DB_NAME,
   process.env.USERNAME,
   process.env.PASSWORD,
   {
